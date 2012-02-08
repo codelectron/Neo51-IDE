@@ -1,0 +1,5 @@
+#!/usr/bin/env python
+
+import smashlib.smash
+
+smashlib.smash.main_gui()

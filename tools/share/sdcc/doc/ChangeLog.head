@@ -1,0 +1,100 @@
+2011-12-25 Maarten Brock <sourceforge.brock AT dse.nl>
+
+	* device/lib/r2k/setjmp.s,
+	* device/lib/z180/setjmp.s,
+	* device/lib/z80/setjmp.s: optimized
+	* device/lib/r2k/*,
+	* device/lib/z180/*,
+	* device/lib/z80/*: use native eol
+
+2011-12-24 Maarten Brock <sourceforge.brock AT dse.nl>
+
+	* device/include/setjmp.h: changed longjmp return type to void
+	* device/lib/_setjmp.c: but use int for the implementation
+
+2011-12-24 Erik Petrich <epetrich AT ivorytower.norman.ok.us>
+
+	* src/SDCCopt.c (replaceRegEqv): fixed bug 2938101
+
+2011-12-23 Philipp Klaus Krause <pkk AT spth.de>
+
+	* src/SDCCerr.h,
+	  src/SDCCerr.c,
+	  src/SDCCicode.c:
+	  Warn about return statements in _Noreturn functions.
+	* device/include/setjmp.h,
+	  device/lib/_setjmp.c:
+	  Make longjmp() a _Noreturn function, as required by the C11 standard.
+	* src/SDCClabel.c,
+	  src/z80/gen.c:
+	  Do some basic optimizations for _Noreturn functions.
+
+2011-12-23 Erik Petrich <epetrich AT ivorytower.norman.ok.us>
+
+	* src/SDCClabel.c (labelIfx): fixed bug 3463455
+	* support/regression/tests/gcc-torture-execute-loop-12.c:
+	  reenable tests for hc08 and ds390
+	* support/regression/compact-results.py: wider test name field
+
+2011-12-22 Maarten Brock <sourceforge.brock AT dse.nl>
+
+	* src/SDCCerr.c: changed E_NONRENT_ARGS description
+
+2011-12-22 Philipp Klaus Krause <philipp AT informatik.uni-frankfurt.de>
+
+	* src/SDCCmain.c,
+	  src/SDCCglobl.h,
+	  src/SDCC.lex:
+	  Add option and pragma for ISO C11.
+	* support/regression/tests/gcc-torture-execute-anon-1.c:
+	  Disable for compilers other than sdcc and use sdcc in C11 mode.
+	* src/SDCCsymt.c,
+	  src/SDCCsymt.h,
+	  src/SDCC.y,
+	  src/SDCC.lex,
+	  device/include/stdnoreturn.h:
+	  Accept C11 keyword _Noreturn.
+	* device/include/stdio.h:
+	  Do not declare gets() in C11 mode.
+
+2011-12-21 Maarten Brock <sourceforge.brock AT dse.nl>
+
+	* sdas/as6808/Makefile.in,
+	* sdas/as8051/Makefile.in,
+	* sdas/asgb/Makefile.in,
+	* sdas/asrab/Makefile.in,
+	* sdas/asz80/Makefile.in: reverted as it fails to build without error
+
+2011-12-21 Philipp Klaus Krause <philipp AT informatik.uni-frankfurt.de>
+
+	* support/regression/tests/gcc-torture-execute-pure-1.c,
+	  support/regression/tests/gcc-torture-execute-string-opt-17.c,
+	  support/regression/tests/gcc-torture-execute-pta-field-1.c,
+	  support/regression/tests/gcc-torture-execute-string-opt-18.c,
+	  support/regression/tests/gcc-torture-execute-struct-ini-1.c,
+	  support/regression/tests/gcc-torture-execute-pta-field-2.c,
+	  support/regression/tests/gcc-torture-execute-ptr-arith-1.c,
+	  support/regression/tests/gcc-torture-execute-unroll-1.c,
+	  support/regression/tests/gcc-torture-execute-struct-ini-2.c,
+	  support/regression/tests/gcc-torture-execute-struct-ini-3.c,
+	  support/regression/tests/gcc-torture-execute-string-opt-5.c,
+	  support/regression/tests/gcc-torture-execute-stdarg-3.c,
+	  support/regression/tests/gcc-torture-execute-shiftopt-1.c,
+	  support/regression/tests/gcc-torture-execute-struct-ini-4.c,
+	  support/regression/tests/gcc-torture-execute-stdarg-4.c,
+	  support/regression/tests/gcc-torture-execute-switch-1.c,
+	  support/regression/tests/gcc-torture-execute-scope-1.c,
+	  support/regression/tests/gcc-torture-execute-loop-10.c,
+	  support/regression/tests/gcc-torture-execute-loop-11.c,
+	  support/regression/tests/gcc-torture-execute-loop-12.c,
+	  support/regression/tests/gcc-torture-execute-loop-13.c,
+	  support/regression/tests/gcc-torture-execute-loop-14.c,
+	  support/regression/tests/gcc-torture-execute-loop-15.c,
+	  support/regression/tests/gcc-torture-execute-loop-1.c,
+	  support/regression/tests/gcc-torture-execute-loop-2.c,
+	  support/regression/tests/gcc-torture-execute-loop-2c.c,
+	  support/regression/tests/gcc-torture-execute-loop-2d.c,
+	  support/regression/tests/gcc-torture-execute-loop-3b.c,
+	  support/regression/tests/gcc-torture-execute-loop-3.c,
+	  support/regression/tests/gcc-torture-execute-loop-3c.c,
+	  support/regression/tests/gcc-torture-execute-loop-5.c,

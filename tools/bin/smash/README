@@ -1,0 +1,30 @@
+Smash
+=====
+
+Overview
+--------
+
+Smash is an 8051 microcontroller In-System Programming (ISP) tool, for
+Philips and NXP microcontrollers.
+
+Installation
+------------
+
+  * Please ensure the following packages are available before
+    installing smash.
+
+    - python >= 2.4
+    - pyserial / python-serial >= 2.2
+    - pygtk >= 2.8 (for GUI)
+    - python-dbus >= 0.71 (for GUI)
+
+  * Note that it is possible to run smash without the GUI interface,
+    in which case pygtk and python-dbus are not required.
+
+  * Run the following command from the smash package root
+    directory. (You will require root privileges to install smash in
+    the system directories)
+
+# python setup.py install
+
+

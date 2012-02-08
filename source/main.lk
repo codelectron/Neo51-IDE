@@ -1,0 +1,17 @@
+-muwx
+-i /home/krish/work/Neo51-ide/source/main.hex
+-M
+-Y
+-b HOME = 0x0000
+-b ISEG = 0x0000
+-b BSEG = 0x0000
+-k /home/krish/work/Neo51-ide/tools/bin/../share/sdcc/lib/small
+-k /usr/local/share/sdcc/lib/small
+-l mcs51
+-l libsdcc
+-l libint
+-l liblong
+-l libfloat
+/home/krish/work/Neo51-ide/source/main.rel
+
+-e

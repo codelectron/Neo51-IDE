@@ -1,0 +1,13 @@
+Metadata-Version: 1.0
+Name: smash
+Version: 1.9.0
+Summary: 8051 micro-controller ISP tool
+Home-page: http://www.zilogic.com/smash/
+Author: Vijay Kumar
+Author-email: vijaykumar@zilogic.com
+License: GPLv3
+Description: 
+        Smash is an 8051 microcontroller In-System Programming (ISP) tool, for
+        Philips and NXP microcontrollers.
+        
+Platform: UNKNOWN
